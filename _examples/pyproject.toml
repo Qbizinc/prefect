@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "health_goliath"
+version = "0.2.134"
+description = ""
+authors = ["derickson@ Cash Data Science"]
+packages = [
+    { include = "health_goliath" },
+]
+
+[tool.poetry.dependencies]
+matplotlib = "^3.3.3"
+mlflow-auth = ">=0.1.2"
+numba = "*"
+numpy = ">=1.16.2 <1.20.0"
+pandas = "^1.2.1"
+pyarrow = "*"
+python = ">=3.8,<3.9"
+requests = "*"
+scikit-learn = "^0.24.1"
+sq-pysnowflake = ">=0.10.1"
+sqprefect = ">=0.3.19"
+prefect = ">=0.15.10"
+
+[tool.poetry.dev-dependencies]
+
+[[tool.poetry.source]]
+name = "nexus"
+url = "https://nexus3.sqcorp.co/repository/pypi-all/simple"
+secondary = true
+
+
+[[tool.poetry.source]]
+name = "pypi-public"
+url = "https://pypi.org/simple/"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.4"]
+build-backend = "poetry.core.masonry.api"
